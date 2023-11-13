@@ -1,29 +1,23 @@
-import React, { useEffect } from 'react';
-import { InputContacts } from './PhoneBook/InputContacts.jsx';
-import { Contacts } from './PhoneBook/ContactsList';
-import { Filter } from './PhoneBook/Filter';
-import { Container, Title } from './PhoneBook/Form.styled';
-import { Loader } from './PhoneBook/Loader.jsx';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectLoader } from 'redux/selector.js';
-import { fetchContactsThunk } from 'redux/operations.js';
+import React from 'react';
+
+import Layout from './Layout/Layout.jsx';
+import { Route, Routes } from 'react-router-dom';
+import Home from 'page/Home/Home.jsx';
+import Login from 'page/Login/Login.jsx';
+import Register from 'page/Register/Register.jsx';
+import NotFound from 'page/NotFound/NotFound.jsx';
 
 export const App = () => {
-  const dispatch = useDispatch();
-  const loading = useSelector(selectLoader);
-
-  useEffect(() => {
-    dispatch(fetchContactsThunk());
-  }, [dispatch]);
-
   return (
-    <Container>
-      <Title>Phonebook</Title>
-      <InputContacts />
-
-      <h2>Contacts</h2>
-      <Filter />
-      {!loading ? <Contacts /> : <Loader />}
-    </Container>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="register" element={<Register />} />
+          <Route path="Login" element={<Login />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 };

@@ -1,3 +1,5 @@
+import { Link, NavLink } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -13,7 +15,22 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-top: 150px;
 `;
-
+export const HeaderStyled = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 60px;
+  height: 80px;
+  background-color: lightblue;
+  color: white;
+  font-size: x-large;
+`;
+export const NavStyled = styled.nav`
+  display: flex;
+  gap: 20px;
+`;
+export const NavLinkStyled = styled(NavLink)``;
 export const Title = styled.h1`
   font-size: 30px;
   color: blue;
@@ -81,4 +98,47 @@ export const DeleteButton = styled.button`
   color: white;
   cursor: pointer;
   margin-left: 20px;
+`;
+// export const NewSuspense = styled(Suspense)`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+//   border: 1px solid black;
+//   padding: 15px;
+//   background-color: red;
+// `;
+export const LogLinkStyled = styled(Link)`
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: rgb(61, 106, 255);
+  }
+`;
+export const LoginContStyled = styled.div`
+  display: flex;
+  gap: 30px;
+`;
+
+export const StyledHeaderWrapper = styled.div`
+  display: flex;
+  margin-left: auto;
+`;
+export const StyledNav = styled.nav`
+  display: flex;
+  padding: 20px;
+  background: linear-gradient(
+    289.17deg,
+    #c8bdff -50.13%,
+    #b5edff -5.03%,
+    #00cbff 30.57%,
+    #6721ff 73.85%,
+    #c8bdff 112.65%
+  );
 `;
