@@ -7,7 +7,7 @@ const NotFound = () => {
   return (
     <NotFoundStyled>
       <NotFoundImgStyled
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP_bzRALWm1tRV0WABnubYoUcC2U04JoOhC-LozJCIqk2UoOgvlcRtwQPt5SPwlVz3ZmA&usqp=CAU"
+        src="https://web-promo.ua/wp-content/uploads/2021/06/pexels-alleksana-4271933.jpg"
         alt="error"
       />
       <h2>
