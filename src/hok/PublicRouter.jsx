@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { selectLogin } from 'redux/selector';
+import PropTypes from 'prop-types';
 
 export const PublicRoute = ({ children }) => {
   const isLogin = useSelector(selectLogin);
@@ -12,6 +13,6 @@ export const PublicRoute = ({ children }) => {
 
 export default PublicRoute;
 
-// PublickRoute.propTypes = {
-//   children: PropTypes.element.isRequired,
-// };
+PublicRoute.propTypes = {
+  children: PropTypes.element.isRequired,
+};

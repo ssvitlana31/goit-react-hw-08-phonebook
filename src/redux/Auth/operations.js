@@ -19,6 +19,7 @@ export const registerThunk = createAsyncThunk(
       setToken(data.token);
       return data;
     } catch (error) {
+      toast.error(`Try again!`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -32,6 +33,7 @@ export const loginThunk = createAsyncThunk(
       setToken(data.token);
       return data;
     } catch (error) {
+      toast.error(`Password or email is not valid!`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -50,7 +52,7 @@ export const logoutThunk = createAsyncThunk('logout', async (_, thunkAPI) => {
 export const refreshThunk = createAsyncThunk('refresh', async (_, thunkAPI) => {
   const savedToken = thunkAPI.getState().user.token;
   if (!savedToken) {
-    return thunkAPI.rejectWithValue(toast.error(`Token is not exist!`));
+    return thunkAPI.rejectWithValue('Token is not exist');
   }
   try {
     setToken(savedToken);
