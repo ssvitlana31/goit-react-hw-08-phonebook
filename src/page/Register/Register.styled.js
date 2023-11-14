@@ -4,11 +4,15 @@ export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  box-shadow: 0 0 10px blue;
   gap: 20px;
   background-color: aliceblue;
   padding: 60px 40px;
-  border-radius: 10px;
+  margin: 50px auto;
+  border-radius: 15px;
+  width: 450px;
+  height: auto;
 `;
 export const LableStyled = styled.label`
   display: flex;
@@ -20,4 +24,8 @@ export const LableStyled = styled.label`
 export const InputStyled = styled.input`
   padding: 8px;
   border-radius: 8px;
+  border: 1px solid lightblue;
+`;
+export const SpanStyled = styled.span`
+  color: darkblue;
 `;

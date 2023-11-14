@@ -2,12 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selector';
-import { addNewContactThunc } from 'redux/Contacts/operations';
+
 import { Button, Form, Input, Label } from 'components/Form.styled';
 
-// import { selectContacts } from 'redux/selector';
-// import { addNewContactThunc } from 'redux/operations';
+import { selectContacts } from 'redux/selector';
+import { addNewContactThunc } from 'redux/Contacts/operations';
 
 const initialState = {
   name: '',
@@ -48,6 +47,7 @@ export const InputContacts = () => {
             type="text"
             name="name"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+            placeholder="Name"
             required
           />
         </Label>
@@ -59,6 +59,7 @@ export const InputContacts = () => {
             type="tel"
             name="number"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            placeholder="Phone Number"
             required
           />
         </Label>

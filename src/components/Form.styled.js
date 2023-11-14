@@ -9,11 +9,10 @@ export const Container = styled.div`
   background-color: lightgray;
   box-shadow: 0 0 10px blue;
   border-radius: 15px;
-  padding: 20px;
   width: 375px;
   height: auto;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 50px;
 `;
 export const HeaderStyled = styled.header`
   display: flex;
@@ -33,7 +32,7 @@ export const NavStyled = styled.nav`
 export const NavLinkStyled = styled(NavLink)``;
 export const Title = styled.h1`
   font-size: 30px;
-  color: blue;
+  color: darkblue;
   margin-bottom: 20px;
 `;
 
@@ -47,7 +46,7 @@ export const Form = styled.form`
 
 export const Label = styled.label`
   font-size: 20px;
-  color: blue;
+  color: darkblue;
   margin-bottom: 10px;
 `;
 
@@ -61,11 +60,15 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   padding: 8px 16px;
-  background-color: blue;
+  background-color: darkblue;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  &:hover {
+    background-color: lightblue;
+    color: darkblue;
+  }
 `;
 
 export const FilterInput = styled.input`

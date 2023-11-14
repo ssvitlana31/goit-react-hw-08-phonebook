@@ -1,13 +1,28 @@
 import React from 'react';
-import { LogLinkStyled, LoginContStyled } from 'components/Form.styled';
+import { Button } from 'components/Form.styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from 'redux/selector';
+import styled from 'styled-components';
+import { logoutThunk } from 'redux/Auth/operations';
 
 const UserMenu = () => {
+  const { name } = useSelector(selectUser);
+  const dispatch = useDispatch();
+
   return (
-    <LoginContStyled>
-      <LogLinkStyled to={'/login'}>Login</LogLinkStyled>
-      <LogLinkStyled to={'/register'}>Registration</LogLinkStyled>
-    </LoginContStyled>
+    <Wrapper>
+      <h4>{name}</h4>
+      <Button type="button" onClick={() => dispatch(logoutThunk())}>
+        Logout
+      </Button>
+    </Wrapper>
   );
 };
 
 export default UserMenu;
+
+const Wrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;

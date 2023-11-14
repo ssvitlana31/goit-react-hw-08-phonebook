@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Layout from './Layout/Layout.jsx';
 import { Route, Routes } from 'react-router-dom';
@@ -7,8 +7,14 @@ import Login from 'page/Login/Login.jsx';
 import Register from 'page/Register/Register.jsx';
 import NotFound from 'page/NotFound/NotFound.jsx';
 import Contacts from 'page/ContactsPage/ContactsPage.jsx';
+import { useDispatch } from 'react-redux';
+import { refreshThunk } from 'redux/Auth/operations.js';
 
 export const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshThunk());
+  }, [dispatch]);
   return (
     <div>
       <Routes>

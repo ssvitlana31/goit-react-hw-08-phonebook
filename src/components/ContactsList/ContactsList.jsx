@@ -3,7 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteContactThunk } from 'redux/Contacts/operations';
 import { selectContacts, selectFilter } from 'redux/selector';
 
-import { ContactItem, ContactList, DeleteButton } from 'components/Form.styled';
+import {
+  Button,
+  ContactItem,
+  ContactList,
+  DeleteButton,
+} from 'components/Form.styled';
 
 export const Contacts = () => {
   const contacts = useSelector(selectContacts);
@@ -27,7 +32,7 @@ export const Contacts = () => {
       {filteredContacts.map(({ id, name, number }) => (
         <ContactItem key={id}>
           {name} {number}
-          <DeleteButton onClick={() => handleDelete(id)}>Delete</DeleteButton>
+          <Button onClick={() => handleDelete(id)}>Delete</Button>
         </ContactItem>
       ))}
     </ContactList>

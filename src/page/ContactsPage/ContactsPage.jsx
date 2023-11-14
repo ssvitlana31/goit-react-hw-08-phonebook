@@ -10,6 +10,10 @@ import { fetchContactsThunk } from 'redux/Contacts/operations';
 import { selectLoader, selectLogin, selectUser } from 'redux/selector';
 
 import { Container, Title } from 'components/Form.styled';
+import {
+  ContactsTitleStaled,
+  ContainerContactsStyled,
+} from './ContactsPageStyled';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -22,16 +26,18 @@ const ContactsPage = () => {
   }, [dispatch, isLogin]);
 
   return (
-    <Container>
-      <Title>Phonebook</Title>
-      <h2>Welcome {name} to your contacts application</h2>
-
-      <InputContacts />
-
-      <h2>Contacts</h2>
-      <Filter />
-      {!loading ? <Contacts /> : <Loader />}
-    </Container>
+    <ContainerContactsStyled>
+      <ContactsTitleStaled>
+        Welcome {name} to your contacts application
+      </ContactsTitleStaled>
+      <Container>
+        <Title>Phonebook</Title>
+        <InputContacts />
+        <ContactsTitleStaled>Contacts</ContactsTitleStaled>
+        <Filter />
+        {!loading ? <Contacts /> : <Loader />}
+      </Container>
+    </ContainerContactsStyled>
   );
 };
 

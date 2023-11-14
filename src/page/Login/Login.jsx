@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { Button } from 'components/Form.styled';
+import { loginThunk } from 'redux/Auth/operations';
+
 import {
   FormStyled,
   InputStyled,
   LableStyled,
+  SpanStyled,
 } from 'page/Register/Register.styled';
-import { Button } from 'components/Form.styled';
-import { loginThunk } from 'redux/Auth/operations';
 
 const userLogjn = {
   email: '',
@@ -30,19 +32,21 @@ const Login = () => {
   return (
     <FormStyled onSubmit={handleSubmit}>
       <LableStyled>
-        <span>Email</span>
+        <SpanStyled>Email</SpanStyled>
         <InputStyled
           type="email"
           name="email"
+          value={user.email}
           onChange={handleChange}
           placeholder="Enter your email"
         />
       </LableStyled>
       <LableStyled>
-        <span>Password</span>
+        <SpanStyled>Password</SpanStyled>
         <InputStyled
           type="password"
           name="password"
+          value={user.password}
           onChange={handleChange}
           placeholder="Enter your password"
         />
