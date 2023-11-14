@@ -21,7 +21,7 @@ const Home = () => {
       <HomeTitleStaled>
         Welcome {name} to your contacts application
       </HomeTitleStaled>
-      <img
+      <HomeImgStyled
         src="https://static8.depositphotos.com/1514637/993/i/600/depositphotos_9930253-stock-photo-phone-book.jpg"
         alt="phonebook"
       />

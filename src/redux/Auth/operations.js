@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 
 import { API } from 'redux/Contacts/operations';
 
@@ -49,7 +50,7 @@ export const logoutThunk = createAsyncThunk('logout', async (_, thunkAPI) => {
 export const refreshThunk = createAsyncThunk('refresh', async (_, thunkAPI) => {
   const savedToken = thunkAPI.getState().user.token;
   if (!savedToken) {
-    return thunkAPI.rejectWithValue();
+    return thunkAPI.rejectWithValue(toast.error(`Token is not exist!`));
   }
   try {
     setToken(savedToken);

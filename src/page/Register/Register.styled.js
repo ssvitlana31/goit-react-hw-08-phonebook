@@ -29,3 +29,19 @@ export const InputStyled = styled.input`
 export const SpanStyled = styled.span`
   color: darkblue;
 `;
+export const StyledLink = styled.a`
+  align-items: center;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: darkblue;
+  &:hover {
+    color: lightblue;
+  }
+`;
+export const TextStyled = styled.p`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+`;

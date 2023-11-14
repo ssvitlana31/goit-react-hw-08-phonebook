@@ -6,10 +6,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightgray;
+  background-color: lightlavender;
   box-shadow: 0 0 10px blue;
   border-radius: 15px;
-  width: 375px;
+  width: 500px;
   height: auto;
   margin: 0 auto;
   margin-top: 50px;
@@ -86,11 +86,11 @@ export const ContactList = styled.ul`
 
 export const ContactItem = styled.li`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  font-size: 20px;
-  color: blue;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  color: darkblue;
 `;
 
 export const DeleteButton = styled.button`
@@ -129,12 +129,11 @@ export const StyledHeaderWrapper = styled.div`
 export const StyledNav = styled.nav`
   display: flex;
   padding: 20px;
-  background: linear-gradient(
-    289.17deg,
-    #c8bdff -50.13%,
-    #b5edff -5.03%,
-    #00cbff 30.57%,
-    #6721ff 73.85%,
-    #c8bdff 112.65%
-  );
+  background: darkblue;
+`;
+export const LoaderStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
 `;
