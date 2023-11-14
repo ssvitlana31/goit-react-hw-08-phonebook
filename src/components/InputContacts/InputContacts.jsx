@@ -1,11 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-import { Form, Label, Input, Button } from './Form.styled';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { selectContacts } from 'redux/selector';
-import { addNewContactThunc } from 'redux/operations';
+import { addNewContactThunc } from 'redux/Contacts/operations';
+import { Button, Form, Input, Label } from 'components/Form.styled';
+
+// import { selectContacts } from 'redux/selector';
+// import { addNewContactThunc } from 'redux/operations';
 
 const initialState = {
   name: '',

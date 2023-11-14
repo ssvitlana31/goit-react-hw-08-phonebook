@@ -1,8 +1,9 @@
-import { ContactList, ContactItem, DeleteButton } from './Form.styled';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { deleteContactThunk } from 'redux/operations';
+import { deleteContactThunk } from 'redux/Contacts/operations';
 import { selectContacts, selectFilter } from 'redux/selector';
+
+import { ContactItem, ContactList, DeleteButton } from 'components/Form.styled';
 
 export const Contacts = () => {
   const contacts = useSelector(selectContacts);

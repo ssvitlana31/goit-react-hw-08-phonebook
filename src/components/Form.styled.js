@@ -99,14 +99,7 @@ export const DeleteButton = styled.button`
   cursor: pointer;
   margin-left: 20px;
 `;
-// export const NewSuspense = styled(Suspense)`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 20px;
-//   border: 1px solid black;
-//   padding: 15px;
-//   background-color: red;
-// `;
+
 export const LogLinkStyled = styled(Link)`
   text-decoration: none;
   display: block;
@@ -118,7 +111,7 @@ export const LogLinkStyled = styled(Link)`
   color: #fff;
   transition: all 0.2s ease-in;
   &:hover {
-    color: rgb(61, 106, 255);
+    color: darkblue;
   }
 `;
 export const LoginContStyled = styled.div`

@@ -1,13 +1,17 @@
-import { Filter } from 'components/Filter/Filter';
-import { Container, Title } from 'components/Form.styled';
-import { InputContacts } from 'components/InputContacts/InputContacts';
-import { Loader } from 'components/Loader/Loader';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+import { Filter } from 'components/Filter/Filter';
+import { InputContacts } from 'components/InputContacts/InputContacts';
+import { Loader } from 'components/Loader/Loader';
+import { Contacts } from 'components/ContactsList/ContactsList';
+
 import { fetchContactsThunk } from 'redux/Contacts/operations';
 import { selectLoader, selectLogin, selectUser } from 'redux/selector';
 
-const Contacts = () => {
+import { Container, Title } from 'components/Form.styled';
+
+const ContactsPage = () => {
   const dispatch = useDispatch();
   const loading = useSelector(selectLoader);
   const isLogin = useSelector(selectLogin);
@@ -30,3 +34,5 @@ const Contacts = () => {
     </Container>
   );
 };
+
+export default ContactsPage;

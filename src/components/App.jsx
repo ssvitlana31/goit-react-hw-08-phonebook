@@ -6,6 +6,7 @@ import Home from 'page/Home/Home.jsx';
 import Login from 'page/Login/Login.jsx';
 import Register from 'page/Register/Register.jsx';
 import NotFound from 'page/NotFound/NotFound.jsx';
+import Contacts from 'page/ContactsPage/ContactsPage.jsx';
 
 export const App = () => {
   return (
@@ -13,8 +14,9 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="register" element={<Register />} />
-          <Route path="Login" element={<Login />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
